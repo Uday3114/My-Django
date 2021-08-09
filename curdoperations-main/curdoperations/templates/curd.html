@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+
+<center>
+    <h1>
+        Curd Operations!
+    </h1>
+    <br><br>
+
+     {% if messages %}
+    {% for msg in messages %}
+      <span style="color:blue;">
+        {{msg}}
+      </span>
+    {% endfor %}
+  {% endif %}
+</center>
+
+<br><br><br>
+
+
+
+<div class="container">
+  <div class="row ">
+    <div class="col ">
+        <center>
+             <form action="#" method="POST">
+                 {% csrf_token %}
+                  <table>
+                      {{form}}
+                  </table>
+                 <button type="submit" class="btn btn-primary">Submit</button>
+             </form>
+            </center>
+    </div>
+
+
+    <div class="col">
+        <center>
+        <table class="table">
+  <thead>
+    <tr>
+        <th scope="row">ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Age</th>
+      <th scope="col">Gender</th>
+      <th scope="col">Email</th>
+        <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% if data %}
+        {% for d in data %}
+    <tr>
+      <th scope="row">{{d.id}}</th>
+      <td>{{d.name}}</td>
+      <td>{{d.age}}</td>
+      <td>{{d.gender}}</td>
+      <td>{{d.email}}</td>
+      <td>
+          <a class="btn btn-warning " href="{% url 'update' d.id %}" role="button">Edit</a>
+          <form action="{% url 'delete' d.id %}" method="post">
+              {% csrf_token %}
+              <input type="submit" value="Delete" class="btn btn-danger ">
+          </form>
+
+          </td>
+    </tr>
+    {% endfor %}
+  {% endif %}
+  </tbody>
+</table>
+            </center>
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+    <center>
+        <h1>
+            Login Form
+        </h1>
+        <br><br>
+        <form action="#" method="post" novalidate>
+          {% csrf_token %}
+            {{ form.non_field_errors }}
+            {% for fields in form %}
+            <div style="margin:10px;">
+                {{fields.label_tag}} {{field}}
+                {% for error in fields %}
+                <span>
+                    {{error}}
+                </span>
+                {% endfor %}
+            </div>
+            {% endfor %}
+
+
+
+    <input type="submit" value="Signup">
+</form>
+
+{% if messages %}
+    {% for msg in messages %}
+        <span style="color:green;">
+            {{msg}}
+        </span>
+
+    {% endfor %}
+{% endif %}
+    </center>
+</div>
+
+</body>
+</html>

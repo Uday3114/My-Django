@@ -1,0 +1,16 @@
+<body>
+<form action ="" method="POST">
+    {% csrf_token %}
+    {{form.as_ul}}
+    {{form.as_p}}
+    {{form.as_table}}
+
+    Name:{{form.name}}
+    Email:{{form.email}}
+    <input type="submit" value="Submit"><br>
+    {% for s in stu %}
+    {{s.name}}
+    {{s.email}}
+    {% endfor %}
+
+</body>

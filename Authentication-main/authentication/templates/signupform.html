@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+    <center>
+        <h1>
+            SignUp Form
+        </h1>
+        <br><br>
+        <form action="#" method="post">
+            {% csrf_token %}
+    <table>
+        {{form.as_table}}
+    </table>
+            <br>
+    <input type="submit" value="Signup">
+</form>
+
+{% if messages %}
+    {% for msg in messages %}
+        <span style="color:green;">
+            {{msg}}
+        </span>
+
+    {% endfor %}
+{% endif %}
+    </center>
+</div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Air Ticket</title>
+    <style>
+        body{
+        background-image:url({% static 'images/pic9.jpg' %});
+        background-size:100%;
+        }
+        .button {
+            background-color: #668cff;
+            border: none;
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .button3 {
+            border-radius: 6px;
+        }
+        #leftbox {
+                float:left;
+                background:Red;
+                width:25%;
+                height:280px;
+            }
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+<nav class="navbar navbar-t bg-t">
+  <a class="navbar-brand"  style="color:white; font-size: 40px; font-family:cursive;"  href="#">
+    FLY HIGH
+  </a>
+    <button onclick="document.location.href = '/signup'" class="button button3" style="margin-left: 900px">SignUp</button>
+    <button onclick="document.location.href = '/login'" class="button button3" style="margin-right: 200px">SignIn</button>
+</nav>
+<div class = 'leftbox' >
+<h1 style="color:tomato; font-family:cursive;">THE JOURNEY OF A THOUSAND MILES <br>BEGINS WITH A SINGLE STEP.</h1>
+    </div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>STUDENT_INFO</title>
+</head>
+<body>
+	<center>
+		<h1>THE STUDENTS DETAILS ARE:</h1>
+
+		{% if student %}
+		<table border='5'>
+				<tr>
+					<td>FIRSTNAME</td>
+					<td>LASTNAME</td>
+					<td>CLGNAME</td>
+					<td>BRANCH</td>
+					<td>DOB</td>
+					<td>GENDER</td>
+					<td>DEPT</td>
+					<td>STUDENT_ID</td>
+				</tr>
+
+				{% for data in student %}
+				<tr>
+					<td>{{data.FIRSTNAME}}</td>
+					<td>{{data.LASTNAME}}</td>
+					<td>{{data.CLGNAME}}</td>
+					<td>{{data.BRANCH}}</td>
+					<td>{{data.DOB}}</td>
+					<td>{{data.GENDER}}</td>
+					<td>{{data.DEPT}}</td>
+					<td>{{data.STUDENT_ID}}</td>
+				</tr>
+					
+				{% endfor %}
+
+			</table>
+			
+		{% else %}
+		
+		<h1>RECORD ARE NOT FOUND</h1>
+			
+		{% endif %}
+		
+	</center>
+
+</body>
+</html>

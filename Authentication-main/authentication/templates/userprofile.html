@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <center>
+        <h1>Profile Page</h1>
+        {% if messages %}
+        {% for msg in messages %}
+        <span {% if message.tags %} class="{{message.tags}}" {% endif %}>
+            {{msg}}
+        </span>
+        {% endfor %}
+        {% endif%}
+    </center>
+    <a href="{% url 'logout' %}">
+        Logout
+    </a>
+</div>
+
+</body>
+</html>

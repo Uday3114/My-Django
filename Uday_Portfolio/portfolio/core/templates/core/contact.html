@@ -1,0 +1,60 @@
+{% extends 'core/base.html' %}
+{% block content %}
+
+<div class="container mt-5">
+    <h1 class="text-warning mb-5 border-bottom">CONTACT US</h1>
+    <div class="row text-white mb-5">
+        <p class="mx-auto mb-5">
+            Do you have any questions? Please do not hesitate to contact.
+        </p>
+
+        <div class="col-sm-9 mb-5">
+            <form action="">
+                <div class="row">
+                    <div class="from-group col-md-6">
+                        <label for="inputName">Your Name</label>
+                        <input type="text" class="form-control" id="inputName"/>
+                    </div>
+
+                     <div class="from-group col-md-6">
+                        <label for="inputEmail">Your Email *</label>
+                        <input type="email" class="form-control" id="inputEmail" required />
+                    </div>
+                </div>
+                 <div class="from-group">
+                        <label for="inputSubject">Your Subject</label>
+                        <input type="text" class="form-control" id="inputSubject"/>
+                    </div>
+                 <div class="mb-3">
+                        <label for="inputTextarea">Your Message *</label>
+                     <textarea type="text" class="form-control" id="inputTextarea" required></textarea>
+                    </div>
+                <button class="btn btn-primary" type="submit">Submit</button>
+            </form>
+        </div>
+        <div class="col-sm-3 text-center">
+            <ul class="list-unstyled">
+                <li>
+                    <i class="fas fa-map-marker-alt fa-2x i-color"></i>
+                    <p>Hyderabad, Telangana, India</p>
+                </li>
+                <li>
+                    <i class="fas fa-phone mt-4 fa-2x i-color"></i>
+                    <p>+ 91 8000000000</p>
+                </li>
+                <li>
+                    <i class="fas fa-envelope mt-4 fa-2x i-color"></i>
+                    <p>uday@gmail.com</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="text-center">
+    <div >
+    <a style="padding:5px" href="https://github.com" target="_blank"><i class="fab fa-github fa-2x i-color mr-3"></i></a>
+    <a style="padding:5px" href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f fa-2x i-color mr-3"></i></a>
+    <a style="padding:5px" href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram fa-2x i-color mr-3"></i></a>
+    </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% load static%}
+<html>
+<head>
+	<title>MESSENGER</title>
+	<link rel="stylesheet" type="text/css" href="{% static "css/chatapp.css"%}">
+	<script src="{% static "JS/chat.js" %}"></script>
+</head>
+<body>
+
+	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+		 <div class="collapse navbar-collapse" id="navbarToggle">
+            <div class="navbar-nav mr-auto">
+              <a class="nav-item nav-link" >Chats</a>
+              <a class="nav-item nav-link" >Status</a>
+				<a class="nav-item nav-link" >Calls</a>
+				<input type="text" placeholder="Search..">
+            </div>
+</nav>
+	<div style="background-color: #61BF0E ">
+	<img src="{% static "images/whatsapp.jpg"%}">
+	<div style="background-color: #61BF0E ">
+	<marquee>
+		<h3>{{msg}}</h3>
+	</marquee>
+
+</body>
+</html>

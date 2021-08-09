@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% load static%}
+<html>
+<head>
+	<title>MESSENGER</title>
+	<link rel="stylesheet" type="text/css" href="{% static "css/foodapp.css"%}">
+	<script src="{% static "JS/food.js" %}"></script>
+</head>
+<body>
+	<img src='{% static "images/swiggy.jpg"%}'>
+		<div style="background-color:#FF7733">
+	<marquee>
+		<h3>{{msg}}</h3>
+	</marquee>
+	</div>
+
+</body>
+</html>

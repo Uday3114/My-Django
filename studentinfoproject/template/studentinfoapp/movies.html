@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MOVIES_INFO</title>
+</head>
+<body>
+	<center>
+		<h1>THE MOVIE DETAILS ARE:</h1>
+
+		{% if movies %}
+		<table border='5'>
+				<tr>
+					<td>Name</td>
+					<td>Actor</td>
+					<td>Actress</td>
+					<td>Budget</td>
+
+				</tr>
+
+				{% for data in movies %}
+				<tr>
+					<td>{{data.Name}}</td>
+					<td>{{data.Actor}}</td>
+					<td>{{data.Actress}}</td>
+					<td>{{data.Budget}}</td>
+
+				</tr>
+
+				{% endfor %}
+
+			</table>
+
+		{% else %}
+
+		<h1>RECORD ARE NOT FOUND</h1>
+
+		{% endif %}
+
+	</center>
+
+</body>
+</html>
