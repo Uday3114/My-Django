@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+<!--    <link href="{% static 'css/home_style_logged_out.css' %}" rel="stylesheet" type="text/css">-->
+    <style>
+        body{
+            background-image: url("{% static 'images/pic7.jpg' %}");
+            background-position: center;
+            background-size: cover;
+            height: 750px;
+            background-repeat: no-repeat
+        }
+
+        .button {
+            background-color: #2771d1;
+            border: none;
+            color: rgb(232, 241, 241);
+            text-decoration: none;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .button3 {
+            border-radius: 6px;
+        }
+
+        .navbar{
+            background-color: #9143H7;
+            font-family: cursive;
+            overflow: hidden;
+            float: left;
+            width: 100%;
+            text-align: center;
+            text-decoration: none;
+            font-size: 32px;
+            padding: 8px 8px;
+        }
+
+        .navbar a:hover{
+            text-decoration: none;
+        }
+
+        .navbar-right a{
+            margin-left: 16px;
+        }
+
+
+    </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Welcome</title>
+</head>
+<body>
+
+    <div class="navbar">
+        <!-- <a href="/" style="font-size: 40px;"><b>Let'sChat</b></a> -->
+        <div class="navbar-right">
+<!--            <a href="/login" class="login_text">Login</a>-->
+<!--            <a href="/signup" class="register text">Register</a>-->
+<img src="{% static 'images/logo.png' %}" alt="">
+<a href="/" style="font-size: 40px; color: rgb(177, 71, 71);"><b>Let'sChat</b></a>
+            <button onclick="document.location.href = '/signup'" class="button button3" style="margin-left: 720px"></button>
+            <button onclick="document.location.href = '/signup'" class="button button3" style="margin-left: 720px">Register</button>
+            <button onclick="document.location.href = '/login'" class="button button3" style="margin-right: 100px">Login</button>
+            <button onclick="document.location.href = 'adminpage1/login'" class="button button3" style="margin-right: -30px">AdminLogin</button>
+        </div>
+    </div>
+                <h1 style='color:white; font-family:cursive'>{{ip}}</h1> 
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+</body>
+</html>
